@@ -4,7 +4,7 @@
 #bold_is_bright = true
 #clickable_url = true
 #dynamic_title = true
-font = Monospace 9
+font = Monospace
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -64,7 +64,6 @@ color4 = rgb(87,199,255)
 color5 = rgb(255,106,193)
 color6 = rgb(154,237,254)
 color7 = rgb(241,241,240)
-
 # color0 = #3f3f3f
 # color1 = #705050
 # color2 = #60b48a

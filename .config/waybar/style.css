@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: Monospace, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    /* font-size: 14px; */
     min-height: 0;
 }
 
@@ -57,28 +57,28 @@ window#waybar.chromium {
     border-bottom: 3px solid #ffffff;
 }
 
-#window, 
-#mpd, 
-#clock, 
-#battery, 
-#cpu, 
-#memory, 
-#temperature, 
-#backlight, 
-#network, 
-#pulseaudio, 
-#custom-media, 
-#tray, 
-#mode, 
+#window,
+#mpd,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
 #idle_inhibitor {
-    padding: 0 10px;
+    padding: 3px 10px;
     margin: 0 5px;
     color: #ffffff;
 }
-/* 
+/*
 #clock {
     background-color: #64727D;
-} 
+}
 
 #battery {
     background-color: #ffffff;
@@ -110,7 +110,7 @@ window#waybar.chromium {
 label:focus {
     background-color: #000000;
 }
-/* 
+/*
 #cpu {
     background: #2ecc71;
     color: #000000;
