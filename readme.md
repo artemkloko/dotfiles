@@ -1,3 +1,5 @@
+![](screenshot.png)
+
 Core:
 - `base-devel`
 - `openssh`
