@@ -5,6 +5,8 @@ Core:
 - `openssh`
 
 Community:
+- `arc-gtk-theme`
+- `arc-icon-theme`
 - `bemenu`
 - `code`
 - `mako`
