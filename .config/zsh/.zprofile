@@ -1,5 +1,6 @@
 eval $(ssh-agent)
 
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-  XKB_DEFAULT_LAYOUT=us exec sway
+if [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway # -d 2> ~/.config/sway/sway.log
+  # swaymsg gaps inner all set 16
 fi
