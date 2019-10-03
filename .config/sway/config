@@ -5,17 +5,18 @@
 # Read `man 5 sway` for a complete reference.
 
 default_border none
+default_floating_border none
 exec mako --background-color "#282a38cc" --border-size 0 --padding 20
-set $dmenu BEMENU_BACKEND=wayland bemenu -i --nb "#282a38cc" --tf "#ff6ac1" --hf "#ff5c57" --fn "Monospace"
+set $dmenu BEMENU_BACKEND=wayland bemenu -i --nb "#282a38cc" --tf "#ae81ff" --hf "#a6e22e" --fn "Monospace"
 
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
+set $left j
+set $down k
+set $up i
 set $right l
 # Your preferred terminal emulator
 set $term termite
@@ -59,6 +60,14 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #       middle_emulation enabled
 #   }
 #
+
+input "*" {
+    xkb_layout "us,gr,ru(phonetic_yazherty)"
+    xkb_variant ,nodeadkeys
+    xkb_options "grp:caps_toggle, ctrl:swap_lalt_lctl"
+}
+
+#
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -70,10 +79,10 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Return exec $term
 
     # kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+Shift+x kill
 
     # start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+x exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -86,7 +95,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+c reload
 
     # exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -118,24 +127,24 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+1 workspace 1
     bindsym $mod+2 workspace 2
     bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym $mod+q workspace 4_Q
+    bindsym $mod+w workspace 5_W
+    bindsym $mod+e workspace 6_E
+    bindsym $mod+a workspace 7_A
+    bindsym $mod+s workspace 8_S
+    bindsym $mod+d workspace 9_D
+    bindsym $mod+z workspace 10_Z
     # move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace 1
     bindsym $mod+Shift+2 move container to workspace 2
     bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
+    bindsym $mod+Shift+q move container to workspace 4_Q
+    bindsym $mod+Shift+w move container to workspace 5_W
+    bindsym $mod+Shift+e move container to workspace 6_E
+    bindsym $mod+Shift+a move container to workspace 7_A
+    bindsym $mod+Shift+s move container to workspace 8_S
+    bindsym $mod+Shift+d move container to workspace 9_D
+    bindsym $mod+Shift+z move container to workspace 10_Z
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -148,9 +157,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+g layout stacking
+    bindsym $mod+t layout tabbed
+    bindsym $mod+y layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -162,7 +171,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+space focus mode_toggle
 
     # move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym $mod+h focus parent
 #
 # Scratchpad:
 #
@@ -183,16 +192,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize shrink width 100px
+    bindsym $down resize grow height 100px
+    bindsym $up resize shrink height 100px
+    bindsym $right resize grow width 100px
 
     # ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 100px
+    bindsym Down resize grow height 100px
+    bindsym Up resize shrink height 100px
+    bindsym Right resize grow width 100px
 
     # return to default mode
     bindsym Return mode "default"
