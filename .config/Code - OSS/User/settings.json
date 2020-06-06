@@ -1,0 +1,35 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.dragAndDrop": false,
+    "editor.fontFamily": "monospace",
+    "editor.rulers": [80],
+    "explorer.enableDragAndDrop": false,
+    "terminal.integrated.fontFamily": "monospace",
+    "workbench.colorCustomizations": {
+      "editorRuler.foreground": "#ff4081",
+      // the following copied from ~/.config/termite/config
+      // "terminal.background": "#262335",
+      // "terminal.border": "",
+      // "terminal.foreground": "#f8f8f2",
+      "terminal.ansiBlack": "#272822",
+      "terminal.ansiBlue": "#66d9ef",
+      "terminal.ansiBrightBlack": "#75715e",
+      "terminal.ansiBrightBlue": "#66d9ef",
+      "terminal.ansiBrightCyan": "#a1efe4",
+      "terminal.ansiBrightGreen": "#a6e22e",
+      "terminal.ansiBrightMagenta": "#ae81ff",
+      "terminal.ansiBrightRed": "#f92672",
+      "terminal.ansiBrightWhite": "#f9f8f5",
+      "terminal.ansiBrightYellow": "#f4bf75",
+      "terminal.ansiCyan": "#a1efe4",
+      "terminal.ansiGreen": "#a6e22e",
+      "terminal.ansiMagenta": "#ae81ff",
+      "terminal.ansiRed": "#f92672",
+      "terminal.ansiWhite": "#f8f8f2",
+      "terminal.ansiYellow": "#f4bf75"
+      // "terminal.selectionBackground": "",
+      // "terminalCursor.background": "#272822",
+      // "terminalCursor.foreground": "#f5f4f1",
+    }
+  }
+  
