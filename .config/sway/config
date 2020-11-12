@@ -9,6 +9,8 @@ default_floating_border none
 exec mako --background-color "#282a38cc" --border-size 0 --padding 20
 set $dmenu BEMENU_BACKEND=wayland bemenu -i --nb "#282a38cc" --tf "#ae81ff" --hf "#a6e22e" --fn "Monospace"
 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.

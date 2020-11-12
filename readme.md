@@ -17,6 +17,7 @@ Extra:
 - `adobe-source-code-pro-fonts`
 - `adobe-source-sans-pro-fonts`
 - `adobe-source-serif-pro-fonts`
+- `polkit` (sudo pop-up)
 
 Aur:
 - `j4-dmenu-desktop`
