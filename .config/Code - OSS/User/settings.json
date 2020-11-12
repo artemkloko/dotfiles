@@ -30,6 +30,7 @@
       // "terminal.selectionBackground": "",
       // "terminalCursor.background": "#272822",
       // "terminalCursor.foreground": "#f5f4f1",
-    }
+    },
+    "window.zoomLevel": 0
   }
   
