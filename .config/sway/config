@@ -24,7 +24,7 @@ set $right l
 set $term termite
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu j4-dmenu-desktop --dmenu='$dmenu' --term='$term' | xargs swaymsg exec
+set $menu j4-dmenu-desktop --dmenu='$dmenu' --term='$term' --usage-log=$HOME/.config/j4-dmenu-desktop-usage.log | xargs swaymsg exec
 
 ### Output configuration
 #
